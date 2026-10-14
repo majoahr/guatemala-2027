@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guatemala 2027 | Nuestra aventura</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#264f43;--sage:#e6eee6;--cream:#faf7f0;--ink:#24332e;--gold:#d5a46a;--muted:#68766f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.2}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.hero{min-height:76vh;background:linear-gradient(0deg,rgba(16,37,31,.83),rgba(16,37,31,.10)),url("https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:end;color:white;padding:70px max(7%,calc((100vw - 1100px)/2))}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
+.hero h1{font-size:clamp(55px,10vw,110px);margin:12px 0}
+.hero p{font-size:20px;max-width:620px}
+.hero a,.primary{display:inline-block;background:var(--gold);color:#172a24;padding:13px 22px;border-radius:50px;text-decoration:none;font-weight:700;border:0}
+.wrap{max-width:1120px;margin:auto;padding:60px 22px}
+.center{text-align:center}
+.lead{color:var(--muted);max-width:720px;margin:0 auto 25px}
+.section-title{font-size:clamp(32px,5vw,49px);margin:8px 0 15px}
+.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;position:sticky;top:0;z-index:10;background:rgba(250,247,240,.96);padding:15px;box-shadow:0 3px 18px #00000012;backdrop-filter:blur(12px)}
+.tab{border:1px solid #cad5cd;background:white;color:var(--green);padding:11px 16px;border-radius:50px;font-weight:700}
+.tab.active{background:var(--green);color:white}
+.panel{display:none;animation:appear .25s ease}
+.panel.active{display:block}
+@keyframes appear{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.banner{width:100%;height:360px;object-fit:cover;border-radius:20px}
+.card{background:white;border:1px solid #e7e7df;border-radius:19px;overflow:hidden;box-shadow:0 6px 24px #142f2110}
+.card img{width:100%;height:210px;object-fit:cover}
+.card-body{padding:21px}
+.card h3{font-size:24px;margin:5px 0 10px}
+.card p{color:#56645d;margin:7px 0 14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.pill{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:1px;background:var(--sage);color:var(--green);padding:5px 10px;border-radius:20px;font-weight:700}
+.link{display:inline-block;color:var(--green);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.note{background:var(--sage);border-left:4px solid var(--green);padding:19px 22px;border-radius:12px;margin:23px 0}
+.timeline{border-left:2px solid #b9cbbd;margin:28px 0 35px 12px;padding-left:25px}
+.stop{position:relative;margin:0 0 27px}
+.stop:before{content:"";position:absolute;left:-33px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid var(--cream)}
+.stop h3{margin:0 0 5px;font-size:23px}
+.stop p{margin:0 0 6px}
+.price{font-weight:700;color:var(--green)}
+table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}
+th,td{padding:13px;text-align:left;border-bottom:1px solid #e5e9e3;font-size:14px}
+th{background:var(--green);color:white}
+.table-scroll{overflow-x:auto;border-radius:12px;margin:18px 0}
+.budget{background:var(--green);color:white;border-radius:20px;padding:25px;margin:28px 0}
+.budget h3{margin:0 0 12px}
+.budget table{background:transparent}
+.budget td{color:white;border-color:#ffffff2b}
+.budget strong{color:#f5d1a2}
+footer{background:#19382e;color:white;padding:40px 22px;text-align:center}
+footer p{opacity:.8}
+.small{font-size:13px;color:var(--muted)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+@media(max-width:750px){
+.hero{min-height:65vh;padding:35px 22px}
+.hero p{font-size:16px}
+.wrap{padding:38px 17px}
+.nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+.tab{white-space:nowrap;font-size:12px;padding:9px 12px}
+.cards,.cards.two{grid-template-columns:1fr}
+.banner{height:230px}
+th,td{font-size:12px;padding:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div>
+<div class="eyebrow">20 — 24 de mayo de 2027 · 12 viajeros</div>
+<h1>Guatemala<br>2027</h1>
+<p>Una aventura entre calles coloniales, volcanes, montañas y momentos inolvidables.</p>
+<a href="#explorar">Explorar nuestro viaje ↓</a>
+</div>
+</header>
+
+<section class="wrap center">
+<div class="eyebrow" style="color:var(--green)">Nuestra próxima aventura</div>
+<h2 class="section-title">Cinco días para recordar</h2>
+<p class="lead">Del encanto colonial de Antigua a una noche frente al Volcán de Fuego. Aquí reuniremos nuestro itinerario, las opciones que estamos comparando y los costos estimados del viaje.</p>
+<p><span class="pill">12 adultos</span> <span class="pill">4 noches</span> <span class="pill">Mayo 2027</span></p>
+</section>
+
+<div id="explorar"></div>
+<nav class="nav" aria-label="Secciones del viaje">
+<button class="tab active" onclick="show('dia1',this)">Día 1 · Antigua</button>
+<button class="tab" onclick="show('volcan',this)">Días 2–3 · Volcán</button>
+<button class="tab" onclick="show('dia4',this)">Día 4 · Hobbitenango</button>
+<button class="tab" onclick="show('dia5',this)">Día 5 · Regreso</button>
+<button class="tab" onclick="show('opcional',this)">Opcional</button>
+<button class="tab" onclick="show('hospedaje',this)">Hospedajes</button>
+<button class="tab" onclick="show('presupuesto',this)">Presupuesto</button>
+</nav>
+
+<main class="wrap">
+
+<section class="panel active" id="dia1">
+<span class="pill">Jueves 20 de mayo</span>
+<h2 class="section-title">Día 1 · Descubriendo Antigua</h2>
+<p class="lead" style="margin-left:0">Nuestro primer encuentro con Guatemala: calles empedradas, arquitectura colonial, cafeterías y una cena especial. El recorrido se adaptará al horario de llegada de nuestro vuelo.</p>
+<img class="banner" src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&fit=crop&w=1300&q=85" alt="Paisaje de Guatemala">
+
+<h3>✈️ Del aeropuerto a Antigua</h3>
+<p>Desde el Aeropuerto Internacional La Aurora (GUA) hasta nuestro alojamiento en Antigua. El trayecto suele tomar aproximadamente 1–2 horas, según el tráfico.</p>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Transporte</th><th>Total para 12</th><th>Por persona</th><th>Evaluación</th></tr></thead>
+<tbody>
+<tr><td><b>Camioneta privada</b></td><td>$2,600–$2,800</td><td>$217–$233</td><td>⭐ Favorita</td></tr>
+<tr><td>Shuttle compartido</td><td>$3,300–$4,000</td><td>$275–$333</td><td>Si llegamos en vuelos distintos</td></tr>
+<tr><td>Uber o taxis separados</td><td>Variable</td><td>Variable</td><td>Menos práctico</td></tr>
+</tbody></table>
+</div>
+<p>🚐 <a class="link" href="https://simoontours.com/en/shuttle" target="_blank" rel="noopener">Cotizar Simoontours ↗</a> &nbsp; · &nbsp; <a class="link" href="https://spring-bus.com/es/shuttles/guatemala/ciudad-de-guatemala-a-antigua-guatemala/" target="_blank" rel="noopener">Cotizar Spring Bus ↗</a></p>
+
+<h3>🚶 Nuestra ruta caminando</h3>
+<div class="timeline">
+<div class="stop"><h3>01 · Iglesia de La Merced</h3><p>Una de las fachadas coloniales más bonitas de Antigua. Primera parada para conocer y fotografiar.</p><span class="price">Gratis · 20–30 min</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Iglesia+La+Merced+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>02 · Arco de Santa Catalina</h3><p>La foto obligatoria del viaje. Pasearemos por una de las calles más emblemáticas de Antigua.</p><span class="price">Gratis · 20–30 min</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arco+de+Santa+Catalina+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>03 · Starbucks Casa del Arco</h3><p>Una parada para conocer sus espacios coloniales y tomar café si se nos antoja.</p><span class="price">Consumo aprox. $80–$150 MXN</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Starbucks+Casa+del+Arco+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>04 · Doña Luisa Xicotencatl</h3><p>Panadería tradicional famosa por su pan de banano. Ideal para café, pan o una comida ligera.</p><span class="price">$80–$200 MXN</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Dona+Luisa+Xicotencatl+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>05 · Parque Central y Catedral de San José</h3><p>El corazón de Antigua, con su fuente, edificios históricos y la fachada de la catedral.</p><span class="price">Áreas públicas gratis · 30–45 min</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parque+Central+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>06 · Tanque La Unión</h3><p>Antiguo lavadero público rodeado de arcos, perfecto para fotografías.</p><span class="price">Gratis · 15–25 min</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tanque+La+Union+Antigua+Guatemala">Ver ubicación ↗</a></div>
+<div class="stop"><h3>07 · Convento de Santa Clara</h3><p>Patios, arcos de piedra y jardines. Lo visitaremos si llegamos a tiempo antes del cierre.</p><span class="price">Entrada estimada $100–$150 MXN</span><br><a class="link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Convento+Santa+Clara+Antigua+Guatemala">Ver ubicación ↗</a></div>
+</div>
+<a class="primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Iglesia+La+Merced+Antigua+Guatemala&destination=Convento+Santa+Clara+Antigua+Guatemala&travelmode=walking&waypoints=Arco+de+Santa+Catalina+Antigua+Guatemala%7CStarbucks+Casa+del+Arco+Antigua+Guatemala%7CDona+Luisa+Xicotencatl+Antigua+Guatemala%7CParque+Central+Antigua+Guatemala%7CTanque+La+Union+Antigua+Guatemala">🗺️ Abrir ruta en Google Maps</a>
+
+<h3>🌙 Terminamos con una cena</h3>
+<p>Después del recorrido, regresaremos al alojamiento para descansar y cambiarnos antes de cenar.</p>
+<div class="cards">
+<div class="card"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=650&q=80" alt="Ambiente de restaurante ilustrativo"><div class="card-body"><span class="pill">Opción 1</span><h3>Café Sky</h3><p>Terraza con vistas a los volcanes.</p><b>$250–$500 MXN/persona</b><p><a class="link" href="https://cafeskyantigua.com/" target="_blank">Ver restaurante ↗</a></p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=650&q=80" alt="Restaurante ilustrativo"><div class="card-body"><span class="pill">Opción 2</span><h3>Los Tres Tiempos</h3><p>Comida guatemalteca y ambiente colorido.</p><b>$200–$400 MXN/persona</b><p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Los+Tres+Tiempos+Antigua+Guatemala" target="_blank">Ver restaurante ↗</a></p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=650&q=80" alt="Restaurante ilustrativo"><div class="card-body"><span class="pill">Opción 3</span><h3>Las Palmas</h3><p>Restaurante y bar para una cena de grupo.</p><b>$250–$450 MXN/persona</b><p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Las+Palmas+Restaurant+Bar+Antigua+Guatemala" target="_blank">Ver restaurante ↗</a></p></div></div>
+</div>
+<div class="budget"><h3>💰 Presupuesto estimado · Día 1</h3><p>Transporte, comida ligera, entrada a Santa Clara y cena.</p><h2>$617–$1,133 MXN por persona</h2><small>Sin hospedaje ni compras personales.</small></div>
+<div class="note">📌 Si llegamos después del mediodía, priorizaremos La Merced, el Arco, Parque Central y Tanque La Unión. Antes de dormir prepararemos la mochila para el Acatenango.</div>
+</section>
+
+<section class="panel" id="volcan">
+<span class="pill">Viernes 21 y sábado 22 de mayo</span>
+<h2 class="section-title">Días 2 y 3 · Volcán Acatenango 🌋</h2>
+<p class="lead" style="margin-left:0">Dos días de senderismo, una noche de campamento y la posibilidad de observar el Volcán de Fuego desde Acatenango, únicamente si las condiciones de seguridad lo permiten.</p>
+<img class="banner" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1300&q=85" alt="Montañas, imagen ilustrativa">
+<div class="note"><b>Altitud de la cima:</b> aproximadamente 3,976 m · <b>Exigencia:</b> alta · <b>Duración:</b> dos días y una noche. Los horarios dependerán del operador y del ritmo del grupo.</div>
+<h3>Viernes · Ascenso y campamento</h3>
+<div class="timeline">
+<div class="stop"><h3>Salida desde Antigua</h3><p>Traslado al inicio del sendero, instrucciones y revisión del equipo.</p></div>
+<div class="stop"><h3>Caminata hacia el campamento</h3><p>Ascenso aproximado de 4–6 horas, con descansos. La duración depende de las condiciones y del grupo.</p></div>
+<div class="stop"><h3>Atardecer y noche en la montaña</h3><p>Campamento, cena y observación del Volcán de Fuego si es seguro y visible. No se garantizan erupciones.</p></div>
+</div>
+<h3>Sábado · Amanecer y regreso</h3>
+<div class="timeline">
+<div class="stop"><h3>Cima opcional</h3><p>Ascenso exigente antes del amanecer, solo si los guías y las condiciones lo permiten.</p></div>
+<div class="stop"><h3>Desayuno y descenso</h3><p>Regreso al campamento, desayuno, recogida del equipo y descenso aproximado de 2.5–4 horas.</p></div>
+<div class="stop"><h3>Regreso a Antigua</h3><p>Comida, ducha, descanso y cena tranquila. Presupuesto adicional de comida: $150–$300 MXN por persona.</p></div>
+</div>
+<h3>Agencias que compararemos</h3>
+<div class="cards two">
+<div class="card"><div class="card-body"><span class="pill">Por cotizar</span><h3>OX Expeditions</h3><p>Opciones de campamento y diferentes niveles de comodidad. Revisar equipo, comidas, transporte y entrada.</p><a class="link" href="https://oxexpeditions.com/tours/acatenango-overnight-hike/" target="_blank">Consultar tour ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Por cotizar</span><h3>Wicho & Charlie's</h3><p>Otra alternativa con alojamiento en la montaña. Confirmar cupo y condiciones para 12 viajeros.</p><a class="link" href="https://wichoandcharlies.com/" target="_blank">Consultar agencia ↗</a></div></div>
+</div>
+<div class="budget"><h3>💰 Presupuesto provisional del tour</h3><h2>$1,800–$3,000 MXN por persona</h2><small>Pendiente de cotización para mayo de 2027. No incluye necesariamente todos los extras.</small></div>
+<div class="note"><b>Seguridad primero:</b> verificaremos el acceso oficial al volcán, guías suficientes para 12 personas, condiciones de cancelación, equipo, protocolos de emergencia y capacidad física. No está contemplado subir al Volcán de Fuego.</div>
+</section>
+
+<section class="panel" id="dia4">
+<span class="pill">Domingo 23 de mayo</span>
+<h2 class="section-title">Día 4 · Hobbitenango + Altamira 🌿</h2>
+<p class="lead" style="margin-left:0">Un día relajado de paisajes, miradores, actividades, fotografías y comida con vistas a las montañas.</p>
+<img class="banner" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1300&q=85" alt="Paisaje verde de montaña, imagen ilustrativa">
+<div class="cards two">
+<div class="card"><div class="card-body"><span class="pill">Primera parada</span><h3>Hobbitenango</h3><p>Casitas estilo hobbit, columpio gigante, senderos, miradores, juegos y fotografías. Planeamos dedicarle unas 3–4 horas.</p><p class="price">Entrada estimada: $150 MXN</p><a class="link" href="https://www.hobbitenango.com/es/day-pass/" target="_blank">Entradas y actividades ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Segunda parada</span><h3>Altamira Oriole</h3><p>Esculturas gigantes, miradores, senderos y comida en el restaurante. Aproximadamente 2–3 horas.</p><p class="price">Entrada estimada: $60 MXN</p><a class="link" href="https://www.facebook.com/altamiraantigua" target="_blank">Ver parque ↗</a><p><a class="link" href="https://www.degusta.com.gt/antigua/restaurante/altamira_101005/menu" target="_blank">Consultar menú ↗</a></p></div></div>
+</div>
+<h3>🚐 Transporte para el grupo</h3>
+<p>Preferimos una camioneta privada para los 12: Airbnb → Hobbitenango → Altamira → Airbnb. Así evitamos contratar varios traslados.</p>
+<p><b>Transporte estimado:</b> $200–$350 MXN por persona para el circuito, pendiente de cotizar.</p>
+<div class="budget"><h3>💰 Presupuesto estimado · Día 4</h3>
+<table><tr><td>Hobbitenango</td><td>$150</td></tr><tr><td>Altamira</td><td>$60</td></tr><tr><td>Transporte</td><td>$200–$350</td></tr><tr><td>Comida</td><td>$150–$250</td></tr><tr><td>Bebidas y snacks</td><td>$50–$100</td></tr></table>
+<h2>Total: $610–$910 MXN por persona</h2>
+</div>
+<div class="note">Nuestra propuesta: desayunar en Antigua, visitar Hobbitenango, comer en Altamira y regresar por la tarde. Noche libre para descansar o pasear.</div>
+</section>
+
+<section class="panel" id="dia5">
+<span class="pill">Lunes 24 de mayo</span>
+<h2 class="section-title">Día 5 · ¡Hasta pronto, Guatemala! ✈️</h2>
+<img class="banner" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1300&q=85" alt="Paisaje de viaje, imagen ilustrativa">
+<div class="timeline">
+<div class="stop"><h3>Desayuno y últimas compras</h3><p>Si el vuelo lo permite, desayunaremos en Antigua y compraremos recuerdos, café o chocolates.</p><span class="price">$100–$200 MXN por persona</span></div>
+<div class="stop"><h3>Salida del alojamiento</h3><p>Recogida en camioneta privada y traslado al Aeropuerto Internacional La Aurora.</p><span class="price">$217–$233 MXN por persona</span></div>
+<div class="stop"><h3>Vuelo de regreso</h3><p>Consideraremos aproximadamente tres horas de anticipación en el aeropuerto para un vuelo internacional, más el traslado y un margen por tráfico.</p></div>
+</div>
+<div class="budget"><h3>💰 Presupuesto estimado · Día 5</h3><h2>$317–$433 MXN por persona</h2><small>No incluye vuelo ni compras personales.</small></div>
+</section>
+
+<section class="panel" id="opcional">
+<span class="pill">Experiencia adicional</span>
+<h2 class="section-title">Opcional · Lago de Atitlán 🛶</h2>
+<img class="banner" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1300&q=85" alt="Paisaje natural, imagen ilustrativa">
+<p>Nos encantaría visitar el Lago de Atitlán y conocer algunos de sus pueblos, como San Juan La Laguna y San Marcos, además de pasear en lancha.</p>
+<p>También tenemos en mente el entorno de La Casa del Mundo, cerca de Jaibalito, y la posibilidad de conocer Indian Nose.</p>
+<div class="note">Esta excursión <b>no está incluida en el itinerario principal</b>. Desde Antigua requiere varias horas de carretera, más traslados en lancha. Solo la agregaremos si cambiamos fechas o contamos con suficiente tiempo.</div>
+<a class="primary" href="https://www.google.com/maps/search/?api=1&query=Lago+de+Atitlan+Guatemala" target="_blank">Ver Lago de Atitlán en Maps ↗</a>
+</section>
+
+<section class="panel" id="hospedaje">
+<span class="pill">Por decidir</span>
+<h2 class="section-title">Nuestro alojamiento 🏡</h2>
+<p class="lead" style="margin-left:0">Buscamos una casa bonita para aproximadamente 12 adultos, preferentemente con camas matrimoniales para las parejas, alberca si es posible y buena ubicación para conocer Antigua.</p>
+<div class="note"><b>Presupuesto objetivo:</b> aproximadamente $12,000–$18,000 MXN por las cuatro noches para todo el grupo. Los precios, la capacidad real y la distribución de camas deben confirmarse antes de reservar.</div>
+<h3>Opciones de Airbnb</h3>
+<div class="cards">
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>La Masía</h3><p>San Pedro Las Huertas. Anuncio para 12 huéspedes, con alberca. Verificar camas y habitaciones.</p><a class="link" href="https://www.airbnb.mx/rooms/802142259013018806" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>Casa con alberca y jacuzzi</h3><p>Opción para comparar capacidad, distribución de habitaciones y costo final.</p><a class="link" href="https://www.airbnb.mx/rooms/888509372609720132" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>Villa Montecristo</h3><p>Villa con alberca y jacuzzi. Confirmar disponibilidad y distribución para las parejas.</p><a class="link" href="https://www.airbnb.com/rooms/33288639" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>Casa Thalassa</h3><p>Opción con alberca; revisar si sus habitaciones nos resultan cómodas.</p><a class="link" href="https://www.airbnb.mx/rooms/1670724729700716675" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>Casa Pomona</h3><p>Opción amplia con alberca y jacuzzi. Revisar especialmente el precio.</p><a class="link" href="https://es.airbnb.com/rooms/1536682681678980657" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Airbnb</span><h3>Casa Bella Vista</h3><p>Alternativa cercana al centro; no tiene alberca anunciada.</p><a class="link" href="https://www.airbnb.mx/rooms/1348174759780842237" target="_blank">Ver fotos y anuncio ↗</a></div></div>
+</div>
+
+<h3>Opciones de Booking</h3>
+<div class="cards">
+<div class="card"><div class="card-body"><span class="pill">Booking</span><h3>Villas de la Ermita</h3><p>Precio mostrado para la búsqueda de 12 adultos y cuatro noches: <b>$15,181 MXN</b>. Alberca anunciada.</p><p class="price">≈ $1,265 por persona, si el total cubre a los 12.</p><a class="link" href="https://www.booking.com/hotel/gt/villas-de-la-ermita.html?checkin=2027-05-20&checkout=2027-05-24&group_adults=12&no_rooms=1&selected_currency=MXN" target="_blank">Ver fotos y disponibilidad ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Booking</span><h3>Restful Hideaway</h3><p>Precio mostrado: <b>$15,880 MXN</b> por cuatro noches en la búsqueda del grupo.</p><p class="price">≈ $1,323 por persona, sujeto a verificar capacidad.</p><a class="link" href="https://www.booking.com/hotel/gt/restful-hideaway-near-antigua.html?checkin=2027-05-20&checkout=2027-05-24&group_adults=12&no_rooms=1&selected_currency=MXN" target="_blank">Ver fotos y disponibilidad ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Booking</span><h3>Casa Veraluz</h3><p>Precio mostrado: <b>$16,866 MXN</b> por cuatro noches en la búsqueda del grupo.</p><p class="price">≈ $1,406 por persona, sujeto a verificar capacidad.</p><a class="link" href="https://www.booking.com/hotel/gt/casa-veraluz-la-antigua-guatemala.html?checkin=2027-05-20&checkout=2027-05-24&group_adults=12&no_rooms=1&selected_currency=MXN" target="_blank">Ver fotos y disponibilidad ↗</a></div></div>
+<div class="card"><div class="card-body"><span class="pill">Booking</span><h3>Villas Santa Ana</h3><p>Precio mostrado: <b>$18,879 MXN</b> por cuatro noches en la búsqueda del grupo.</p><p class="price">≈ $1,573 por persona, sujeto a verificar capacidad.</p><a class="link" href="https://www.booking.com/hotel/gt/villas-santa-ana.html?checkin=2027-05-20&checkout=2027-05-24&group_adults=12&no_rooms=1&selected_currency=MXN" target="_blank">Ver fotos y disponibilidad ↗</a></div></div>
+</div>
+<div class="note"><b>Importante:</b> Booking mostró esos importes al buscar para 12 adultos, pero todavía debemos comprobar que cada tarifa corresponda realmente a una casa o conjunto de unidades con capacidad para todos. Ninguna de estas opciones está reservada.</div>
+</section>
+
+<section class="panel" id="presupuesto">
+<span class="pill">Planeación económica</span>
+<h2 class="section-title">¿Cuánto podría costar el viaje? 💰</h2>
+<p class="lead" style="margin-left:0">Resumen orientativo por persona. Los vuelos, tours y hospedajes aún no están reservados.</p>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Concepto</th><th>Estimado por persona</th></tr></thead>
+<tbody>
+<tr><td>Vuelo redondo México–Guatemala</td><td>Objetivo: hasta $4,000 MXN</td></tr>
+<tr><td>Hospedaje, cuatro noches</td><td>$1,000–$1,500 MXN</td></tr>
+<tr><td>Día 1 · Antigua, comida y traslado</td><td>$617–$1,133 MXN</td></tr>
+<tr><td>Días 2–3 · Tour Acatenango</td><td>$1,800–$3,000 MXN</td></tr>
+<tr><td>Día 3 · Comida al regresar</td><td>$150–$300 MXN</td></tr>
+<tr><td>Día 4 · Hobbitenango y Altamira</td><td>$610–$910 MXN</td></tr>
+<tr><td>Día 5 · Desayuno y aeropuerto</td><td>$317–$433 MXN</td></tr>
+</tbody>
+</table>
+</div>
+<div class="budget">
+<h3>Presupuesto de referencia</h3>
+<h2>≈ $5,500–$11,300 MXN por persona</h2>
+<p>Rango orientativo que incluye los conceptos de la tabla y un vuelo de hasta $4,000 MXN. El extremo inferior supone un vuelo más económico; no es una cotización ni un precio garantizado.</p>
+</div>
+<div class="note">A medida que confirmemos vuelos, casa, agencia y transporte, sustituiremos los estimados por importes reales y eliminaremos las opciones descartadas.</div>
+</section>
+
+</main>
+
+<footer>
+<h2>Guatemala 2027 🇬🇹</h2>
+<p>Una aventura que estamos construyendo juntos.</p>
+<p style="font-size:12px">Primera versión · Itinerario y precios sujetos a cambios · Fotografías de ambientación ilustrativas</p>
+</footer>
+
+<script>
+function show(id,button){
+document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+button.classList.add("active");
+document.getElementById("explorar").scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>
